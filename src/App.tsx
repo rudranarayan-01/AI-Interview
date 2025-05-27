@@ -27,7 +27,7 @@ const App = () => {
         <Route element={<ProtectedRoute><MainLayout/></ProtectedRoute>} />
 
         {/* add all the project route  */}
-      </Routes>
+      </Routes> 
     </Router>
   )
 }
