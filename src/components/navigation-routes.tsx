@@ -12,7 +12,7 @@ export const NavigationRoutes = ({
   return (
     <ul
       className={cn(
-        "flex items-center gap-6",
+        "flex items-center gap-8",
         isMobile && "items-start flex-col gap-8"
       )}
     >
