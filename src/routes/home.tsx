@@ -30,14 +30,14 @@ const features = [
 
 const testimonials = [
   {
-    name: "Sophia Johnson",
-    role: "Software Engineer",
+    name: "Rajesh Kumar Sahu",
+    role: "Sr. System Engineer@Infosys",
     quote:
       "This platform transformed my interview preparation. I landed my dream job thanks to the AI coaching!",
   },
   {
-    name: "Liam Smith",
-    role: "Product Manager",
+    name: "Krishna Bajpayee",
+    role: "Software Engineer@Quotient",
     quote:
       "The mock interviews are incredibly realistic. Highly recommend for anyone looking to boost their confidence.",
   },
