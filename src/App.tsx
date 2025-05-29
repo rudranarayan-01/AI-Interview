@@ -17,6 +17,10 @@ import { Feedback } from "./routes/feedback";
 import AboutPage from "./routes/about";
 import ContactPage from "./routes/contact";
 import ServicePage from "./routes/service";
+import InterviewPreparationPage from "./routes/prepation";
+import CareerCoachingPage from "./routes/career-coaching";
+import ResumeBuildingPage from "./routes/resume-building";
+import ResumeBuilder from "./routes/build-resume";
 
 const App = () => {
   return (
@@ -28,6 +32,10 @@ const App = () => {
           <Route path="/about" element={<AboutPage/>}/>
           <Route path="/contact" element={<ContactPage/>}/>
           <Route path="/services" element={<ServicePage/>}/>
+          <Route path="/services/interview-prep" element={<InterviewPreparationPage/>} />
+          <Route path="/services/career-coaching" element={<CareerCoachingPage/>} />
+          <Route path="/services/resume-building" element={<ResumeBuildingPage/>} />
+          <Route path="/services/resume-building/build" element={<ResumeBuilder/>} />
         </Route>
 
         {/* authentication layout */}

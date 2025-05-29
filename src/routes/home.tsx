@@ -1,76 +1,116 @@
-import { Sparkles } from "lucide-react";
+import React from "react";
+import { motion } from "framer-motion";
+import { Button } from "@/components/ui/button";
+import { Container } from "@/components/container";
+import { CheckCircle2 } from "lucide-react";
+import { Link } from "react-router-dom";
+import { MarqueImg } from "@/components/marquee-img";
 import Marquee from "react-fast-marquee";
 
-import { Container } from "@/components/container";
-import { Button } from "@/components/ui/button";
-import { MarqueImg } from "@/components/marquee-img";
-import { Link } from "react-router-dom";
+const features = [
+  {
+    title: "AI-Powered Interview Coaching",
+    description:
+      "Personalized feedback and practice questions tailored to your skills.",
+    icon: CheckCircle2,
+  },
+  {
+    title: "Real-time Mock Interviews",
+    description:
+      "Engage with an AI interviewer to sharpen your communication skills.",
+    icon: CheckCircle2,
+  },
+  {
+    title: "Progress Tracking",
+    description:
+      "Monitor your growth and get actionable insights to improve.",
+    icon: CheckCircle2,
+  },
+];
 
-const HomePage = () => {
+const testimonials = [
+  {
+    name: "Sophia Johnson",
+    role: "Software Engineer",
+    quote:
+      "This platform transformed my interview preparation. I landed my dream job thanks to the AI coaching!",
+  },
+  {
+    name: "Liam Smith",
+    role: "Product Manager",
+    quote:
+      "The mock interviews are incredibly realistic. Highly recommend for anyone looking to boost their confidence.",
+  },
+];
+
+const stats = [
+  { label: "Offers Received", value: "250k+" },
+  { label: "Interviews Aced", value: "1.2M+" },
+  { label: "Success Rate", value: "98%" },
+];
+
+const listVariant = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.15,
+    },
+  },
+};
+
+const itemVariant = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0 },
+};
+
+const cardHover = {
+  scale: 1.05,
+  boxShadow: "0 10px 20px rgba(0,0,0,0.12)",
+};
+
+const HomePage: React.FC = () => {
   return (
-    <div className="flex-col w-full pb-24">
-      <Container>
-        <div className="my-8">
-          <h2 className="text-3xl text-center md:text-left md:text-6xl">
-            <span className=" text-outline font-extrabold md:text-8xl">
-              AI Superpower
-            </span>
-            <span className="text-gray-500 font-extrabold">
-              - A better way to
-            </span>
-            <br />
-            improve your interview chances and skills
-          </h2>
+    <div className="bg-white text-black min-h-screen font-sans">
+      <Container className="py-24 md:py-32 space-y-20">
+        {/* Hero */}
+        <motion.section
+          className="max-w-4xl mx-auto text-center space-y-6"
+          initial="hidden"
+          animate="visible"
+          variants={listVariant}
+        >
+          <motion.h1
+            className="text-5xl font-extrabold tracking-tight"
+            variants={itemVariant}
+          >
+            Ace Your Next Interview with <br />
+            <span className="text-gray-800">AI-Powered Coaching</span>
+          </motion.h1>
+          <motion.p
+            className="text-lg text-gray-600 max-w-xl mx-auto"
+            variants={itemVariant}
+          >
+            Unlock your full potential with tailored practice, instant feedback,
+            and in-depth insights designed to get you hired faster.
+          </motion.p>
+          <motion.div
+            className="flex justify-center gap-6 mt-8"
+            variants={itemVariant}
+          >
+            <Link to="/generate">
+              <Button size="lg" className="px-10 py-3">
+                Get Started
+              </Button>
+            </Link>
+            <Link to="/about">
+              <Button variant="outline" size="lg" className="px-10 py-3">
+                Learn More
+              </Button>
+            </Link>
+          </motion.div>
+        </motion.section>
 
-          <p className="mt-4 text-muted-foreground text-sm">
-            Boost your interview skills and increase your success rate with
-            AI-driven insights. Discover a smarter way to prepare, practice, and
-            stand out.
-          </p>
-        </div>
-
-        <div className="flex w-full items-center justify-evenly md:px-12 md:py-16 md:items-center md:justify-end gap-12">
-          <p className="text-3xl font-semibold text-gray-900 text-center">
-            250k+
-            <span className="block text-xl text-muted-foreground font-normal">
-              Offers Recieved
-            </span>
-          </p>
-          <p className="text-3xl font-semibold text-gray-900 text-center">
-            1.2M+
-            <span className="block text-xl text-muted-foreground font-normal">
-              Interview Aced
-            </span>
-          </p>
-        </div>
-
-        {/* image section */}
-        <div className="w-full mt-4 rounded-xl bg-gray-100 h-[420px] drop-shadow-md overflow-hidden relative">
-          <img
-            src="/assets/img/hero.jpg"
-            alt=""
-            className="w-full h-full object-cover"
-          />
-
-          <div className="absolute top-4 left-4 px-4 py-2 rounded-md bg-white/40 backdrop-blur-md">
-            Inteviews Copilot&copy;
-          </div>
-
-          <div className="hidden md:block absolute w-80 bottom-4 right-4 px-4 py-2 rounded-md bg-white/60 backdrop-blur-md">
-            <h2 className="text-neutral-800 font-semibold">Developer</h2>
-            <p className="text-sm text-neutral-500">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
-              distinctio natus, quos voluptatibus magni sapiente.
-            </p>
-
-            <Button className="mt-3">
-              Generate <Sparkles />
-            </Button>
-          </div>
-        </div>
-      </Container>
-
-      {/* marquee section */}
+            {/* marquee section */}
       <div className=" w-full my-12">
         <Marquee pauseOnHover>
           <MarqueImg img="/assets/img/logo/firebase.png" />
@@ -84,35 +124,121 @@ const HomePage = () => {
         </Marquee>
       </div>
 
-      <Container className="py-8 space-y-8">
-        <h2 className="tracking-wide text-xl text-gray-800 font-semibold">
-          Unleash your potential with personalized AI insights and targeted
-          interview practice.
-        </h2>
+        {/* Stats */}
+        <motion.section
+          className="flex justify-center gap-16 text-center max-w-4xl mx-auto"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={listVariant}
+        >
+          {stats.map(({ label, value }) => (
+            <motion.div
+              key={label}
+              className="space-y-2"
+              variants={itemVariant}
+              whileHover={{ scale: 1.1, color: "#111827" }}
+              transition={{ type: "spring", stiffness: 300 }}
+            >
+              <p className="text-4xl font-extrabold">{value}</p>
+              <p className="text-gray-600">{label}</p>
+            </motion.div>
+          ))}
+        </motion.section>
 
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-3">
-          <div className="col-span-1 md:col-span-3">
-            <img
-              src="/assets/img/office.jpg"
-              alt=""
-              className="w-full max-h-96 rounded-md object-cover"
-            />
+        {/* Features */}
+        <motion.section
+          className="max-w-6xl mx-auto grid md:grid-cols-3 gap-12"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={listVariant}
+        >
+          {features.map(({ title, description, icon: Icon }) => (
+            <motion.div
+              key={title}
+              className="border rounded-lg p-8 flex flex-col items-center text-center space-y-4 shadow-md cursor-pointer bg-white"
+              variants={itemVariant}
+              whileHover={cardHover}
+              transition={{ type: "spring", stiffness: 250 }}
+            >
+              <Icon className="w-10 h-10 text-gray-800" />
+              <h3 className="text-xl font-semibold">{title}</h3>
+              <p className="text-gray-600">{description}</p>
+            </motion.div>
+          ))}
+        </motion.section>
+
+        {/* Testimonials */}
+        <motion.section
+          className="max-w-5xl mx-auto space-y-12"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={listVariant}
+        >
+          <motion.h2
+            className="text-3xl font-extrabold text-center"
+            variants={itemVariant}
+          >
+            What Our Users Say
+          </motion.h2>
+          <div className="grid md:grid-cols-2 gap-12">
+            {testimonials.map(({ name, role, quote }) => (
+              <motion.div
+                key={name}
+                className="border rounded-lg p-6 bg-gray-50 shadow"
+                variants={itemVariant}
+                whileHover={cardHover}
+                transition={{ type: "spring", stiffness: 250 }}
+              >
+                <p className="italic text-gray-800">"{quote}"</p>
+                <div className="mt-4">
+                  <p className="font-semibold">{name}</p>
+                  <p className="text-sm text-gray-600">{role}</p>
+                </div>
+              </motion.div>
+            ))}
           </div>
+        </motion.section>
 
-          <div className="col-span-1 md:col-span-2 gap-8 max-h-96 min-h-96 w-full flex flex-col items-center justify-center text-center">
-            <p className="text-center text-muted-foreground">
-              Transform the way you prepare, gain confidence, and boost your
-              chances of landing your dream job. Let AI be your edge in
-              today&apos;s competitive job market.
-            </p>
+        {/* CTA Banner with subtle background animation */}
+        <motion.section
+          className="relative bg-black text-white rounded-lg p-16 text-center max-w-4xl mx-auto overflow-hidden"
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+        >
+          <motion.div
+            className="absolute -top-20 -left-20 w-96 h-96 bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 rounded-full opacity-30 filter blur-3xl"
+            animate={{
+              scale: [1, 1.2, 1],
+              rotate: [0, 45, 0],
+              opacity: [0.3, 0.5, 0.3],
+            }}
+            transition={{ duration: 8, repeat: Infinity, repeatType: "loop", ease: "easeInOut" }}
+          />
+          <motion.div
+            className="absolute -bottom-20 -right-20 w-96 h-96 bg-gradient-to-r from-pink-600 via-red-600 to-yellow-400 rounded-full opacity-30 filter blur-3xl"
+            animate={{
+              scale: [1, 1.15, 1],
+              rotate: [0, -45, 0],
+              opacity: [0.3, 0.6, 0.3],
+            }}
+            transition={{ duration: 7, repeat: Infinity, repeatType: "loop", ease: "easeInOut" }}
+          />
 
-            <Link to={"/generate"} className="w-full">
-              <Button className="w-3/4">
-                Generate <Sparkles className="ml-2" />
-              </Button>
-            </Link>
-          </div>
-        </div>
+          <h2 className="relative text-4xl font-extrabold mb-4">
+            Ready to start your journey?
+          </h2>
+          <p className="relative mb-8 text-gray-300 max-w-xl mx-auto">
+            Join thousands of successful candidates who trust our AI to guide them.
+          </p>
+          <Button size="lg" asChild className="relative z-10">
+            <Link to="/generate">Get Started</Link>
+          </Button>
+        </motion.section>
       </Container>
     </div>
   );
