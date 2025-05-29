@@ -1,9 +1,9 @@
-import { Outlet } from "react-router-dom"
+import { Outlet } from "react-router-dom";
 
 export const Generate = () => {
   return (
-    <div>
-        <Outlet/>
+    <div className="flex-col md:px-12">
+      <Outlet />
     </div>
-  )
-}
+  );
+};
