@@ -1,54 +1,94 @@
-# React + TypeScript + Vite
+# 🤖 AI Interview Web App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An intelligent web application that conducts mock interviews based on user-input skills and experience. Built with a modern tech stack to deliver a smooth, responsive, and secure experience.
 
-Currently, two official plugins are available:
+## 🛠️ Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- ⚛️ **React** – Frontend UI library
+- 🟦 **TypeScript** – Type-safe JavaScript
+- 🎨 **Tailwind CSS** – Utility-first CSS framework
+- 🧩 **Shadcn UI** – Pre-styled UI components
+- 🔥 **Firebase** – Backend services (Firestore, Hosting, Functions)
+- 🔐 **Clerk Auth** – Authentication and user management
+- 🧠 **OpenAI API (or custom AI logic)** – For intelligent interview questioning and evaluation
 
-## Expanding the ESLint configuration
+## 🚀 Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- 🔐 **User Authentication** via Clerk (Sign up, Login, Session Management)
+- 🧑‍💼 **User Profiles** – Add personal info, skills, experience
+- 🧠 **AI-Conducted Interviews** – Dynamic questions based on profile
+- 📊 **Response Evaluation** – Analyze and score user answers
+- 📂 **Result Dashboard** – View performance and feedback
+- 🧾 **Resume Builder** – Create and export professional resumes
+- 📱 **Responsive Design** – Optimized for desktop and mobile
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## 📦 Installation
+
+```bash
+git clone https://github.com/rudranarayan-01/AI-Interview
+cd AI-Interview
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## ⚙️ Setup
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### 1. Firebase
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+- Create a Firebase project
+- Enable Firestore, Authentication, and Functions
+- Replace Firebase config in `/firebase/config.ts`
+
+### 2. Clerk
+
+- Create a Clerk app at [https://clerk.dev](https://clerk.dev)
+- Set environment variables:
+
+```bash
+VITE_CLERK_PUBLISHABLE_KEY=your_clerk_publishable_key
+VITE_CLERK_SECRET_KEY=your_clerk_secret_key
 ```
+
+### 3. Environment Variables
+
+```bash
+VITE_FIREBASE_API_KEY=your_api
+VITE_FIREBASE_AUTH_DOMAIN=your_auth_domain
+VITE_FIREBASE_PROJECT_ID=your_project_id
+VITE_FIREBASE_STORAGE_BUCKET=your_firebase_storage_bucket
+VITE_FIREBASE_MESSAGING_SENDER_ID=your_messaging_sender_id
+VITE_FIREBASE_APP_ID=your_app_id
+VITE_OPENAI_API_KEY=your_openai_api_key
+```
+
+## 🧑‍💻 Scripts
+
+```bash
+npm run dev       # Start local development server
+npm run build     # Build production-ready app
+npm run preview   # Preview production build
+```
+
+## 🖼️ UI Components
+
+Designed using **Shadcn UI** with **Tailwind CSS** for seamless styling.
+
+- Custom Buttons, Inputs, Dialogs
+- Loading Indicators, Toasts
+- Dashboard Layouts and Interview Panels
+
+
+## 📄 License
+
+MIT License
+
+## 🙌 Contributors
+
+Built with ❤️ by [Rudranarayan Sahu](https://github.com/rudranarayan-01)
+
+## 🔗 Links
+
+- 🔥 Live Demo: [your-live-url.com](https://ai-inter.netlify.app/)
+- 🧠 LinkedIn: [Rudranarayan on LinkedIn](https://linkedin.com/in/rudranarayan-sahu-b7b9a6244/)
+- 🌐 Portfolio: [akash0101.pythonanywhere.com](https://akash0101.pythonanywhere.com/)
+
+Happy Coding 
