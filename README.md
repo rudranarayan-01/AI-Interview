@@ -1,4 +1,5 @@
-![image](https://github.com/user-attachments/assets/88996fe6-c49f-426a-b27c-b2f352fc5690)# 🤖 AI Interview Web App
+![image](https://github.com/user-attachments/assets/88996fe6-c49f-426a-b27c-b2f352fc5690)
+# 🤖 AI Interview Web App
 
 An intelligent web application that conducts mock interviews based on user-input skills and experience. Built with a modern tech stack to deliver a smooth, responsive, and secure experience.
 
