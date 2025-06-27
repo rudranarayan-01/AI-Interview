@@ -1,3 +1,4 @@
+![image](https://github.com/user-attachments/assets/88996fe6-c49f-426a-b27c-b2f352fc5690)
 # 🤖 AI Interview Web App
 
 An intelligent web application that conducts mock interviews based on user-input skills and experience. Built with a modern tech stack to deliver a smooth, responsive, and secure experience.
@@ -87,7 +88,7 @@ Built with ❤️ by [Rudranarayan Sahu](https://github.com/rudranarayan-01)
 
 ## 🔗 Links
 
-- 🔥 Live Demo: [your-live-url.com](https://ai-inter.netlify.app/)
+- 🔥 Live Demo: [https://ai-inter.netlify.app/](https://ai-inter.netlify.app/)
 - 🧠 LinkedIn: [Rudranarayan on LinkedIn](https://linkedin.com/in/rudranarayan-sahu-b7b9a6244/)
 - 🌐 Portfolio: [akash0101.pythonanywhere.com](https://akash0101.pythonanywhere.com/)
 
