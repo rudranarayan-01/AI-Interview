@@ -88,8 +88,8 @@ Built with ❤️ by [Rudranarayan Sahu](https://github.com/rudranarayan-01)
 
 ## 🔗 Links
 
-- 🔥 Live Demo: [https://ai-inter.netlify.app/](https://ai-inter.netlify.app/)
+- 🔥 Live Demo: [https://ai-interview-01.vercel.app/](https://ai-interview-01.vercel.app)
 - 🧠 LinkedIn: [Rudranarayan on LinkedIn](https://linkedin.com/in/rudranarayan-sahu-b7b9a6244/)
-- 🌐 Portfolio: [akash0101.pythonanywhere.com](https://akash0101.pythonanywhere.com/)
+- 🌐 Portfolio: [https://rudranarayan.vercel.app/](https://rudranarayan.vercel.app/)
 
 Happy Coding 
