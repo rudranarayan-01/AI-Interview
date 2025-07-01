@@ -91,12 +91,12 @@ const Footer = () => {
             <p className="mb-4">Bhubaneswar, Odisha, India, 757004</p>
             <div className="flex gap-4">
               <SocialLink
-                href="https://akash0101.pythonanywhere.com/"
+                href="https://rudranarayan.vercel.app"
                 icon={<User size={24} />}
                 hoverColor="text-blue-500"
               />
               <SocialLink
-                href="https://datapirateslearning.netlify.app/"
+                href="https://datapirateslearning.netlify.app"
                 icon={<Activity size={24} />}
                 hoverColor="text-blue-400"
               />
